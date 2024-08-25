@@ -22,6 +22,8 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
     - name: Build the Docker image
       run: |
-        apt update && apt install -y libelf-dev
-        ./build.sh
+        tag="${GITHUB_REF##*/}"
+        image_name="ghcr.io/pschichtel/kata-kernel:${tag}"
+        docker build --cache-from type=gha --cache-to type=gha,mode=max -t "$image_name" .
+        docker push "$image_name"
 
