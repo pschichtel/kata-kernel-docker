@@ -5,7 +5,7 @@ RUN apt install -y build-essential git curl flex bison libelf-dev bc
 
 WORKDIR /work
 
-ARG KATA_VERSION='3.16.0'
+ARG KATA_VERSION='3.17.0'
 ARG KERNEL_VERSION='6.14.8'
 
 ENV KATA_DIR="kata"
