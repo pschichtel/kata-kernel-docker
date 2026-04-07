@@ -1,4 +1,4 @@
-FROM docker.io/library/debian:trixie-20260316 AS build
+FROM docker.io/library/debian:trixie-20260406 AS build
 
 RUN apt update
 RUN apt install -y build-essential git curl flex bison libelf-dev bc
