@@ -27,7 +27,7 @@ RUN cd "$BUILD_DIR" \
 RUN cd "$BUILD_DIR" \
  && ./build-kernel.sh ${BUILD_OPTIONS} -f build
 
-RUN mv "${BUILD_DIR}/kata-linux-${KERNEL_VERSION}-"*/arch/x86/boot/bzImage vmlinux
+RUN mv "${BUILD_DIR}/kata-linux-${KERNEL_VERSION}-"*/vmlinux vmlinux
 
 FROM scratch
 
